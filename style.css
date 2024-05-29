@@ -14,6 +14,7 @@ body{
     background-image: url(image.jpg);
     background-size: cover;
     background-position: center ;
+	overflow:hidden;
 }
 .main-width{
 	width: 1280px;
