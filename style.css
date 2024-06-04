@@ -6,32 +6,40 @@
 	text-decoration: none;
 }
 body{
-	overflow-x: hidden;
+	background: #ebd69b;
 }
+	/* overflow-x: hidden;
+	color: #fff;
+}
+
+
+/* ================== Background image Section ====================== */
 #header{
     width: 100%;
     height: 100vh;
     background-image: url(image.jpg);
     background-size: cover;
     background-position: center ;
-	overflow:hidden;
+    overflow: none;
 }
+
+/* ============================ End of Background image Section ===================== */
 .main-width{
-	width: 1280px;
+	width: 1281px;
 	max-width: 95%;
 	margin: 0 auto;
 	padding: 0px 20px;
 }
-.hero{
+/* .hero{
 
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
-    background : linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.5)),url("..background.jpg");
+    background : linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.5)),url("image.jpg");
 	background-size: cover;
 	background-position: center;
 	position: relative;
-}
+} */
 header{
 	padding: 40px 0 30px;
 	display: flex;
@@ -58,7 +66,7 @@ nav .hamb{
 	right: 3%;
 	top:60px;
 	z-index: 5;
-	background: transparent;
+	background:transparent;
 	position: absolute;
 	cursor: pointer;
 	display: none;
@@ -175,17 +183,358 @@ span{
 	color: #2ecc71;
 	transition: .4s;
 }
-.buttom{
+
+/* ==================ABOUT ===================== */
+.about{
+    padding: 2px 0;
+	margin-top: 2px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+width: 100%;
+border-radius: 50px;
+padding: 0px 20px 100px  50px;
+
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size:35px;
+    font-weight: 900;
+    line-height: 1.0;
+    margin-bottom: 30px;
+    color: #d89610;
+    /* text-transform: uppercase; */
+    position: relative;
+    display: inline-block;
+    padding-bottom:2px;
+    /* border-bottom: 2px solid #0baa1d; */
+    margin-bottom: 30px;
+    margin-top: 3px; 
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+	
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor:pointer;
+    position: relative;
+	color: #ffffff;
+
+}
+.tab-links::after{
+	content:'';
+	width: 0;
+	height: 3px;
+	background-color: #d89610;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+	width: 50%;
+}
+.tab-contents{
+	list-style: none;
+	margin: 10px 0;
+	color: #ffffff;
+
+}
+.tab-contents ul li span{
+	color: #0a4248;
+    font-weight: 600;
+	font-size: 14px;
+}
+.tab-contents{
+	display: none;
+}
+.tab-contents.active-tab{
+	display: block;
+}
+
+
+/* ============ End of About Section================ */
+
+
+
+/* ================= Start of Services part====================
+*/
+#services{
+	padding: 3px 50px;
+    background-color: #b5c5cf;
+
+}
+.services-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+	grid-gap: 40px;
+	margin-top:50px;
+}
+.services-list div{
+	background: #949090;
+	padding: 40px;
+	font-size: 13px;
+	font-weight: 300;
+	border-radius:10px;
+}
+.services-list div i{
+	font-size: 50px;
+	margin-bottom:30px;
+	color: #ffffff;
+}
+.services-list div h2{
+	font-size: 30px;
+	font-weight: 900;
+	margin-bottom: 15px;
+	color: white;
+}
+.services-list div a{
+	text-decoration: none;
+	color: #1717c1;
+	font-size: 12px;
+	margin-top: 20px;
+	display: inline-block;
+}
+.services-list div:hover{
+	background: #ff004f;
+    transition: 0.5s;
+	transform: translate(-10px);
+}
+/* ============== End of service part================ */
+
+/* ================= Start of my works================= */
+
+
+
+#portfolio{
+	padding: 50px;
+	background-color: #24433d;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.work-list{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+	grid-gap: 40px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	padding: 50px --100px;
+ }
+	 .work{
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+	 }
+	 .work img{
+	width: 100%;
+	border-radius: 50px;
+	display: block;
+	padding: 30px 20px;
+	 }
+	 .layer{
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+		border-radius: 10px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 40px;
+		opacity: 0;
+		transition: 0.5s;
+		transform: translateY(-100%);
+		color: white;
+	 }
+
+.layer h3{
+	font-weight: 500;
+	margin-top: 20px;
+
+}
+.layer a{
+	text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+	line-height: 60px;
+	background: #fff;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	text-align: center;
+
+}
+.work:hover img{
+	transform:scale(1.2) ;
+}
+.work:hover .layer{
+	height: 100%;
+
+}
+.btn1{
+	display: block;
+	margin: 50px auto;
+	width:fit-content;
+	border: 3px solid#257293;
+	padding: 14px 40px;
+	border-radius: 6px;
+	text-decoration: none;
+	color: #fff;
+	transition: background 0.5s;
+	
+}
+.btn1:hover{
+	background: #0ca2a7;
+}
+
+/* ================= End of my works================= */
+
+
+
+/* ======================Staart of contact part===================== */
+#contact{
+	background-color: #ebd69b;
+	margin-top: 2750px;
+	padding: 30px 90px  20px;
+}
+.container-left{
+	flex-basis: 35%;
+
+}
+.contact-right{
+	flex-basis: 60%;
+}
+.contact-left p{
+	margin-top:30px ;
+}
+.contact-left p i{
+	color: #ff004f;
+	margin-right: 20px;
+	font-size: 25px;
+}
+.social-icons{
+	margin-top: 30px;
+
+}
+.social-icons a{
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	color: #eee;
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: #ababab;
+	margin-bottom: 35px;
+	transition: 0.5s;
+}
+	/* text-decoration: none;
+	font-size: 30px;
+	margin-right: 15px;
+	background-color: rgba(255, 255, 255, 0.1);
+	display: inline-block;
+	transition: 0.5s;
+} */
+.social-icons a:hover{
+	color:#ff004f;
+	transform: translateY(-5px);
+}
+.btn.btn2{
+	display: inline-block;
+	background: transparent;
+	border: 2px solid #fff; 
+	height: 40px ; width:160px;
+	padding: 2px 29px;
+	border-radius: 30px;
+	line-height: 1.3;
+	color: #fff;
+	font-weight: 500;
+	background: #ff004f;
+	margin-top: 4px;
+}
+.btn.btn2 a:hover{
+	transform:scale(1.1);
+	background: #2ecc71;
+	transition: .4s;
+}
+.contact-right form{
+	width: 100%;
+
+}
+form input , form textarea{
+	width: 100%;
+	border: 0;
+	outline: none;
+	background: #262626 ;
+	padding: 15px;
+	margin: 15px 0;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 6px;
+}
+form btn2{
+	padding: 14px 60px;
+	margin-top:20px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+
+/* ================== Copyright footer section============== */
+/* .buttom{
 	margin-top: 243px;
-	padding-bottom: 40px;
+	padding-bottom: 400px;
 
 }
 .buttom p{
 	color: #eee;
 	letter-spacing: 2px;
 	font-size: 15px;
+} */
+.buttom{
+	width: 100%;
+	text-align: center;
+	padding: 25px 0;
+	background-color: #262626;
+	font-weight: 300;
+	margin-top: 50px;
+
 }
-@media screen and (max-width: 930px){
+
+/* ======================= End of Copyright Footer Section =================== */
+
+
+/* ============================CSS for small screens=========================== */
+@media only screen and (max-width: 900px){
+	#header{
+		background-image: url(image3.jpg);
+	}
 	nav .hamb{
 		display: initial;
 	}
@@ -237,9 +586,14 @@ span{
 		right: 20%;
 		left: 20%;
 		padding: 7px 15px;
-		font-size: 14px;
+		font-size:  14px;
 	}
 	nav .nav-list.open{
 	right: 0;	
 	}
 }
+
+
+
+
+  
